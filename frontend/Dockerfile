@@ -4,8 +4,7 @@ FROM node:21 AS frontend-builder
 # Set the working directory to /app
 WORKDIR /app
 
-# Install missing system dependency
-RUN apt-get update && apt-get install -y libatomic1 && rm -rf /var/lib/apt/lists/*
+
 
 # Copy the package.json and package-lock.json for dependency installation
 COPY package*.json ./
