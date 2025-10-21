@@ -4,6 +4,9 @@ FROM node:21 AS backend-builder
 # setup the working dir
 WORKDIR /app
 
+# Install missing system dependency
+RUN apt-get update && apt-get install -y libatomic1 && rm -rf /var/lib/apt/lists/*
+
 # code
 COPY . .
 
