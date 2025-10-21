@@ -19,6 +19,7 @@ pipeline {
             steps {
                 script{
                     code_checkout("https://github.com/DevMadhup/wanderlust.git","devops")
+                    echo "Code Clone Successfully!"
                 }
             }
         }
